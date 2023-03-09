@@ -1,4 +1,4 @@
-import 'package:barcodeokapi/ui/count/home.dart';
+import 'package:barcodeokapi/ui/count/count_page.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
