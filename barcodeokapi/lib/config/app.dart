@@ -1,5 +1,5 @@
+import 'package:barcodeokapi/ui/count/count_page.dart';
 import 'package:flutter/material.dart';
-import 'package:riverpod_sample/hom_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const HomePage(),
+      home: Home(),
     );
   }
 }
