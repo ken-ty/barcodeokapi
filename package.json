@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog-ja": "^0.0.2"
+  }
+}
