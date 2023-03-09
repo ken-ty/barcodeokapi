@@ -1,5 +1,5 @@
+import 'package:barcodeokapi/count_data.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_sample/count_data.dart';
 
 /// タイトルstateのプロバイダ
 final titleProvider = Provider<String>((ref) => 'タイトル');

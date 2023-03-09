@@ -12,7 +12,8 @@ _$_CountData _$$_CountDataFromJson(Map<String, dynamic> json) => _$_CountData(
       countUp: json['countUp'] as int,
     );
 
-Map<String, dynamic> _$$_CountDataToJson(_$_CountData instance) => <String, dynamic>{
+Map<String, dynamic> _$$_CountDataToJson(_$_CountData instance) =>
+    <String, dynamic>{
       'count': instance.count,
       'countDown': instance.countDown,
       'countUp': instance.countUp,

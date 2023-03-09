@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# frutter プロジェクトを実行します
+# flutter プロジェクトを実行します
 
 # TODO: 環境選択 dev, stg, prd ... 
 

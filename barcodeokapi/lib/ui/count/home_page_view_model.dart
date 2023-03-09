@@ -1,7 +1,7 @@
 // [画面機能]
+import 'package:barcodeokapi/logic.dart';
+import 'package:barcodeokapi/provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_sample/logic.dart';
-import 'package:riverpod_sample/provider.dart';
 
 class ViewModel {
   final Logic _logic = Logic();

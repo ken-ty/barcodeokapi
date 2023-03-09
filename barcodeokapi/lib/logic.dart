@@ -1,4 +1,4 @@
-import 'package:riverpod_sample/count_data.dart';
+import 'package:barcodeokapi/count_data.dart';
 
 // [共通機能] xxLogic
 class Logic {
