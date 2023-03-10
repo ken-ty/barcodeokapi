@@ -2,22 +2,18 @@ import 'package:barcodeokapi/ui/count/counter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class Home extends ConsumerWidget {
+class Home extends ConsumerStatefulWidget {
   @override
-  Widget build(context, ref) {
+  ConsumerState<Home> createState() => _HomeState();
+}
+
+class _HomeState extends ConsumerState<Home> {
+  @override
+  Widget build(context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Counter example')),
-      body: Center(
-        // Consumer is a widget that allows you reading providers.
-        child: Consumer(
-          builder: (context, ref, _) {
-            final count = ref.watch(counterProvider);
-            return Text('$count');
-          },
-        ),
-      ),
+      body: Center(child: Text('${ref.watch(counterProvider)}')),
       floatingActionButton: FloatingActionButton(
-        // The read method is a utility to read a provider without listening to it
         onPressed: () => ref.read(counterProvider.notifier).increment(),
         child: const Icon(Icons.add),
       ),
