@@ -22,6 +22,8 @@ dependencies:
   freezed_annotation: ^2.2.0
   # 状態管理の為, 未利用なので後で消す
   hooks_riverpod:
+  # アルバムやカメラアプリを利用する為
+  image_picker: ^0.7.2+1
   # json ←→ Object の from, to を楽にする為
   json_annotation: ^4.8.0
   # 未利用なので後で消す
