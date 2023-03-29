@@ -14,6 +14,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  # 画像圧縮の為
+  flutter_image_compress: ^1.1.3
   # 状態管理の為
   flutter_riverpod:
   # immutable な 状態を作成する為
