@@ -1,4 +1,4 @@
-import 'package:barcodeokapi/ui/count/count_page.dart';
+import 'package:barcodeokapi/config/menu.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: Home(),
+      home: Menu(),
     );
   }
 }
