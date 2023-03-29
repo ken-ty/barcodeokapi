@@ -14,21 +14,31 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  # 状態管理の為
   flutter_riverpod:
+  # immutable な 状態を作成する為
   freezed_annotation: ^2.2.0
+  # 状態管理の為, 未利用なので後で消す
   hooks_riverpod:
+  # json ←→ Object の from, to を楽にする為
   json_annotation: ^4.8.0
+  # 未利用なので後で消す
   riverpod:
+  # 未利用なので後で消す
   riverpod_annotation:
 
 dev_dependencies:
+  # freezed や json_serialized は build_runner で 自動生成ファイル作る為
   build_runner: ^2.3.3
   # build_verify: ^3.0.0
   # custom_lint: ^0.3.2
   flutter_test:
     sdk: flutter
+  # immutable な 状態を作成する為
   freezed: ^2.3.2
+  # json ←→ Object の from, to を楽にする為
   json_serializable: ^6.6.1
+  # 未利用
   riverpod_generator:
   # riverpod_lint:
 
