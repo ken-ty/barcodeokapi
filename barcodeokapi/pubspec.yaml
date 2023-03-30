@@ -23,44 +23,13 @@ dependencies:
   # 状態管理の為, 未利用なので後で消す
   hooks_riverpod:
   # アルバムやカメラアプリを利用する為
-  # FIXME: Android SDK 33 以上じゃないと利用できない?
-  # android の emulator で F5 実行しようとすると以下エラー
+  # TODO: バージョンは要確認
+  # `image_picker ライブラリは、Android SDK のバージョンによっては動作しない可能性があります。しかし、compilesdkversion を 30 のままにして image_picker を使用することはできます。以下はその方法です。
   #
-  # Launching lib/main.dart on AOSP on IA Emulator in debug mode...
-  # main.dart:1
-  # Warning: The plugin flutter_plugin_android_lifecycle requires Android SDK version 33.
-  # For more information about build configuration, see https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
-  # One or more plugins require a higher Android SDK version.
-  # Fix this issue by adding the following to /Users/apple/myDev/barcodeokapi/barcodeokapi/android/app/build.gradle:
-  # android {
-  #   compileSdkVersion 33
-  #   ...
-  # }
-  #
-  #
-  # FAILURE: Build failed with an exception.
-  #
-  # * What went wrong:
-  # Execution failed for task ':image_picker:parseDebugLocalResources'.
-  # > Could not resolve all files for configuration ':image_picker:androidApis'.
-  #    > Failed to transform android.jar to match attributes {artifactType=android-platform-attr, org.gradle.libraryelements=jar, org.gradle.usage=java-runtime}.
-  # image_picker: ^0.7.2
+  # image_picker のバージョンを更新する
+  # まず、image_picker のバージョンを最新に更新することをお勧めします。これにより、最新の Android SDK バージョンで動作するようにライブラリが更新されます。以下のように pubspec.yaml ファイルを更新してください。
+  image_picker: ^0.8.4+6
 
-  # バージョン下げると他のパッケージと干渉してエラー
-  # 
-  # [barcodeokapi] flutter pub get
-  # Running "flutter pub get" in barcodeokapi...                    
-  # The current Dart SDK version is 2.18.6.
-
-  # Because build_runner >=2.4.0 requires SDK version >=3.0.0-134.0.dev <4.0.0 and no versions of build_runner match >2.3.3 <2.4.0, build_runner >2.3.3 is forbidden.
-  # And because build_runner 2.3.3 depends on shelf ^1.0.0, build_runner >=2.3.3 requires shelf ^1.0.0.
-  # And because shelf >=1.0.0 depends on http_parser ^4.0.0 and http >=0.11.3+17 <0.13.0-nullsafety.0 depends on http_parser >=0.0.1 <4.0.0, build_runner >=2.3.3 is incompatible with http >=0.11.3+17 <0.13.0-nullsafety.0.
-  # And because image_picker >=0.6.7 <0.7.0-nullsafety depends on image_picker_platform_interface ^1.1.0 which depends on http ^0.12.1, build_runner >=2.3.3 is incompatible with image_picker >=0.6.7 <0.7.0-nullsafety.
-  # So, because barcodeokapi depends on both image_picker 0.6.7+4 and build_runner ^2.3.3, version solving failed.
-  # pub get failed (1; So, because barcodeokapi depends on both image_picker 0.6.7+4 and build_runner ^2.3.3, version solving failed.)
-  # exit code 1
-  image_picker: 0.6.7+4  # 適当に下げた. このバージョンを選んだ意味は特にない
-  
   # json ←→ Object の from, to を楽にする為
   json_annotation: ^4.8.0
   # 未利用なので後で消す

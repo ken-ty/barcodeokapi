@@ -26,7 +26,7 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion  33
     ndkVersion flutter.ndkVersion
 
     compileOptions {
@@ -48,6 +48,11 @@ android {
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
         minSdkVersion 21
+        // ChatGPT さんの回答
+        // compileSdkVersionは、開発者がアプリケーションをコンパイルするために使用する Android SDK のバージョンを指定するために使用されます。一方、アプリの動作保証は、ターゲットとする Android プラットフォームのバージョン、つまりtargetSdkVersionによって決定されます。
+        // compileSdkVersionには、主にアプリをビルドするためのツールやAPIが含まれています。これには、JavaやKotlinなどの開発言語のサポート、ビルドツール、ライブラリ、およびAPIが含まれます。compileSdkVersionを上げると、新しい開発ツールやAPIが使用できるようになり、開発者はより最新の開発環境を利用することができます。ただし、これらの新しいAPIや開発ツールが利用できるようになっても、古いバージョンのAndroid OSを搭載した端末でのアプリの動作が保証されるわけではありません。
+        // 一方、targetSdkVersionは、開発者がアプリが動作するAndroidの最小バージョンを指定するために使用されます。targetSdkVersionを上げると、アプリが古いバージョンのAndroid OSでも正常に動作することができるようになります。targetSdkVersionを上げることは、アプリの機能性や動作に影響する可能性があるため、慎重に行う必要があります。ただし、targetSdkVersionを上げることで、Google Playストアなどでのアプリの信頼性が高くなることがあります。
+        // つまり、compileSdkVersionは、開発者がアプリをビルドするための開発ツールやAPIのバージョンを指定するために使用され、アプリの動作保証とは直接関係がありません。一方、targetSdkVersionは、アプリが動作するAndroid OSの最小バージョンを指定するために使用され、アプリの動作保証に影響を与える重要なパラメータの1つです。
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
