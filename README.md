@@ -93,6 +93,8 @@ v18.13.0
 | `flutter doctor`  | 環境に問題がないか確認できる. `-v` をつけると詳細表示 |
 | `flutter analyze` | lint 実行                                      |
 | `npx git-cz`      | `git commit` の代わりに利用する                  |
+| `flutter build appbundle` | play sotre アップロード用ファイルを作成   | 
+| `flutter pub run flutter_launcher_icons:main` | アプリアイコンを更新 |
 
 
 ## ディレクトリ構成
