@@ -2,6 +2,8 @@
 
 Okapi's ass is a barcode!
 
+![gyazo](https://gyazo.com/79f3e1ef65ff17fdd7f1b2adeb41c928/raw)
+
 開発デモアプリです. 
 
 キーワード: バーコードスキャナ, マルチ画面, riverpod
