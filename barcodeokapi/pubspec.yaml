@@ -32,10 +32,10 @@ dependencies:
 
   # json ←→ Object の from, to を楽にする為
   json_annotation: ^4.8.0
-  # 未利用なので後で消す
-  riverpod:
-  # 未利用なので後で消す
-  riverpod_annotation:
+  # # 未利用なので後で消す
+  # riverpod:
+  # # 未利用なので後で消す
+  # riverpod_annotation:
 
 dev_dependencies:
   # freezed や json_serialized は build_runner で 自動生成ファイル作る為
@@ -50,9 +50,9 @@ dev_dependencies:
   freezed: ^2.3.2
   # json ←→ Object の from, to を楽にする為
   json_serializable: ^6.6.1
-  # 未利用
-  riverpod_generator:
-  # riverpod_lint:
+  # # 未利用
+  # riverpod_generator:
+  # # riverpod_lint:
 
 flutter:
   uses-material-design: true
