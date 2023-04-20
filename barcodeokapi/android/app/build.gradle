@@ -32,7 +32,7 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdkVersion  33
+    compileSdkVersion  31
     ndkVersion flutter.ndkVersion
 
     compileOptions {
@@ -49,11 +49,8 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "dev.kenty.barcodeokapi"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
-        minSdkVersion 21
+        minSdkVersion 31
         // ChatGPT さんの回答
         // compileSdkVersionは、開発者がアプリケーションをコンパイルするために使用する Android SDK のバージョンを指定するために使用されます。一方、アプリの動作保証は、ターゲットとする Android プラットフォームのバージョン、つまりtargetSdkVersionによって決定されます。
         // compileSdkVersionには、主にアプリをビルドするためのツールやAPIが含まれています。これには、JavaやKotlinなどの開発言語のサポート、ビルドツール、ライブラリ、およびAPIが含まれます。compileSdkVersionを上げると、新しい開発ツールやAPIが使用できるようになり、開発者はより最新の開発環境を利用することができます。ただし、これらの新しいAPIや開発ツールが利用できるようになっても、古いバージョンのAndroid OSを搭載した端末でのアプリの動作が保証されるわけではありません。
