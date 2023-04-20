@@ -8,7 +8,7 @@
 PRODUCT_NAME = barcodeokapi
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.barcodeokapi
+PRODUCT_BUNDLE_IDENTIFIER = dev.kenty.barcodeokapi
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2023 com.example. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2023 dev.kenty. All rights reserved.

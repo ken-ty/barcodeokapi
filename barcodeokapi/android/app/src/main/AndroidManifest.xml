@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.barcodeokapi">
+    package="dev.kenty.barcodeokapi">
    <application
         android:label="barcodeokapi"
         android:name="${applicationName}"
