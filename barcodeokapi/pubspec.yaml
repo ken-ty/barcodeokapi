@@ -51,7 +51,7 @@ dev_dependencies:
   # json ←→ Object の from, to を楽にする為
   json_serializable: ^6.6.1
   # # 未利用
-  # riverpod_generator:
+  riverpod_generator:
   # # riverpod_lint:
 
 flutter:
