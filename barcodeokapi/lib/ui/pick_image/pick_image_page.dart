@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
+// import 'package:image_picker/image_picker.dart';
 
 /// 画像取り込み画面
 class PickImagePage extends StatefulWidget {
@@ -12,19 +12,30 @@ class PickImagePage extends StatefulWidget {
 
 class _SettingPageState extends State<PickImagePage> {
   File? _image;
-  final picker = ImagePicker();
+
+  // 0.6 系以前
 
   Future _getImage() async {
-    // final pickedFile = await picker.getImage(source: ImageSource.gallery);
-
+    // final pickedFile = await ImagePicker(source: ImageSource.gallery);
     // setState(() {
-    //   if (pickedFile != null) {
-    //     _image = File(pickedFile.path);
-    //   } else {
-    //     print('No image selected.');
-    //   }
+    //   _image = File(pickedFile.path);
     // });
   }
+
+  // 0.7 以降
+  // final picker = ImagePicker();
+
+  // Future _getImage() async {
+  //   final pickedFile = await ImagePicker().getImage(source: ImageSource.gallery);
+
+  //   setState(() {
+  //     if (pickedFile != null) {
+  //       _image = File(pickedFile.path);
+  //     } else {
+  //       print('No image selected.');
+  //     }
+  //   });
+  // }
 
   @override
   Widget build(context) {
