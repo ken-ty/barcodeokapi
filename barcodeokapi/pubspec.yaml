@@ -22,13 +22,6 @@ dependencies:
   freezed_annotation: ^2.2.0
   # 状態管理の為, 未利用なので後で消す
   hooks_riverpod:
-  # アルバムやカメラアプリを利用する為
-  # TODO: バージョンは要確認
-  # `image_picker ライブラリは、Android SDK のバージョンによっては動作しない可能性があります。しかし、 compilesdkversion を 30 のままにして image_picker を使用することはできます。以下はその方法です。
-  #
-  # image_picker のバージョンを更新する
-  # まず、image_picker のバージョンを最新に更新することをお勧めします。これにより、最新の Android SDK バージョンで動作するようにライブラリが更新されます。以下のように pubspec.yaml ファイルを更新してください。
-  # image_picker: 0.7.0
 
   # json ←→ Object の from, to を楽にする為
   json_annotation: ^4.8.0
