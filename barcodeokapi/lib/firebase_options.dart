@@ -48,9 +48,6 @@ class DefaultFirebaseOptions {
     }
   }
 
-  // FirebaseOptions の apiKey は公開しても大丈夫な値です
-  // https://qiita.com/hoshymo/items/e9c14ed157200b36eaa5
-
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBrq9s_mz8Fefg6J1bLGbnNS3DfT0VGziQ',
     appId: '1:334820342144:android:5a1b8d3bc64955f2c82965',

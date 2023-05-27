@@ -95,8 +95,9 @@ v18.13.0
 | `flutter doctor`  | 環境に問題がないか確認できる. `-v` をつけると詳細表示 |
 | `flutter analyze` | lint 実行                                      |
 | `npx git-cz`      | `git commit` の代わりに利用する                  |
-| `flutter build appbundle` | play sotre アップロード用ファイルを作成   | 
+| `flutter build appbundle` | play sotre アップロード用ファイルを作成    | 
 | `flutter pub run flutter_launcher_icons:main` | アプリアイコンを更新 |
+| `flutterfire configure` | アプリの Firebase 構成を最新の状態に更新    |
 
 
 ## ディレクトリ構成
@@ -133,3 +134,9 @@ v18.13.0
 ```
 npx git-cz
 ```
+
+## Tips
+
+### firebase_options.dart に apiKey が公開されているのは問題ない?
+
+はい、公開しても大丈夫な値です。 参考: https://qiita.com/hoshymo/items/e9c14ed157200b36eaa5
