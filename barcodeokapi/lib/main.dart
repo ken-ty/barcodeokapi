@@ -1,5 +1,6 @@
 import 'package:barcodeokapi/config/app.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -14,9 +15,17 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
+  // TODO: クラッシュ ハンドラ構成 は 別ファイルに切り出す
+
   // 捕捉されなかった ( = main まで catch されずに到達した ) すべての「致命的」エラーを
   // フレームワークから Crashlytics に渡します.
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+
+  // 上記Flutter フレームワークによって処理されない、捕捉されなかった非同期エラーをすべて Crashlytics に渡します。
+  PlatformDispatcher.instance.onError = (error, stack) {
+    FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+    return true;
+  };
 
   // 指定されたウィジェットをインフレートして画面にアタッチします.
   // ルート ウィジェットの作成なども行います.
