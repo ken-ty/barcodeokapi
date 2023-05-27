@@ -12,9 +12,18 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.2
-  firebase_core: ^2.13.0
   flutter:
     sdk: flutter
+  # Firebase Flutterプラグイン の共通共通パッケージ
+  firebase_core: ^2.13.0
+  # Firebase Authentication のパッケージ
+  firebase_auth: ^4.6.1
+  # Firebase Firestore のパッケージ
+  cloud_firestore: ^4.7.1
+  # Firebase Crashlytics のパッケージ
+  firebase_crashlytics: ^3.3.1
+  # Firebase 便利なUI パッケージ
+  firebase_ui_auth: ^1.4.1
   # 画像圧縮の為
   flutter_image_compress: ^1.1.3
   # 状態管理の為
