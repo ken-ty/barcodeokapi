@@ -20,7 +20,12 @@ class _SettingPageState extends State<SettingPage> {
           ),
           ListTile(
             title: Text("デバイス情報"),
-          )
+          ),
+          // Crashlytics 確認用
+          TextButton(
+            onPressed: () => throw Exception(),
+            child: const Text("Throw Test Exception"),
+          ),
         ],
       ),
     );
