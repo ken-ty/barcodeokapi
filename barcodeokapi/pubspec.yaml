@@ -35,6 +35,7 @@ dependencies:
 
   # json ←→ Object の from, to を楽にする為
   json_annotation: ^4.8.0
+  firebase_analytics: ^10.4.1
   # # 未利用なので後で消す
   # riverpod:
   # # 未利用なので後で消す
