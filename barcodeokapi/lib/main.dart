@@ -1,4 +1,4 @@
-import 'package:barcodeokapi/config/app.dart';
+import 'package:barcodeokapi/core/ui_layer/app.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +31,7 @@ void main() async {
   // ルート ウィジェットの作成なども行います.
   runApp(
     const ProviderScope(
-      child: MyApp(),
+      child: App(),
     ),
   );
 }
