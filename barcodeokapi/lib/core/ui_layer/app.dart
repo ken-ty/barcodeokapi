@@ -1,5 +1,5 @@
-
 import 'package:barcodeokapi/config/menu.dart';
+import 'package:barcodeokapi/config/my_theme.dart';
 import 'package:flutter/material.dart';
 
 /// このアプリの ルートウィジェット
@@ -12,7 +12,8 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'バーコード オカピ',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: MyTheme.kThemeBlue,
+      darkTheme: MyTheme.kThemeDark,
       home: Menu(),
     );
   }
