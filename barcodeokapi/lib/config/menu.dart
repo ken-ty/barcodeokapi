@@ -1,7 +1,7 @@
-import 'package:barcodeokapi/ui/count/count_page.dart';
-import 'package:barcodeokapi/ui/pick_image/pick_image_page.dart';
-import 'package:barcodeokapi/ui/resize/resize_page.dart';
-import 'package:barcodeokapi/ui/setting/setting_page.dart';
+import 'package:barcodeokapi/ui_layer/count/count_page.dart';
+import 'package:barcodeokapi/ui_layer/pick_image_page.dart';
+import 'package:barcodeokapi/ui_layer/resize_page.dart';
+import 'package:barcodeokapi/ui_layer/setting_page.dart';
 import 'package:flutter/material.dart';
 
 /// メニュー
