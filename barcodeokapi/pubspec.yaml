@@ -36,6 +36,8 @@ dependencies:
   # json ←→ Object の from, to を楽にする為
   json_annotation: ^4.8.0
   firebase_analytics: ^10.4.1
+  # アプリに必要な権限の確認(カメラやアルバムアクセス)をする為
+  permission_handler: ^10.3.0
   # # 未利用なので後で消す
   # riverpod:
   # # 未利用なので後で消す
