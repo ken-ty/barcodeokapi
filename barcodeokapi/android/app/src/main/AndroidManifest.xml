@@ -1,5 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dev.kenty.barcodeokapi">
+
+    <!-- アプリ権限追加の設定ここから -->
+    <!-- 参考: https://github.com/Baseflow/flutter-permission-handler/blob/main/permission_handler_android/example/android/app/src/main/AndroidManifest.xml -->
+    <uses-permission android:name="android.permission.INTERNET"/> <!-- インターネット接続-->
+    <uses-permission android:name="android.permission.CAMERA"/> <!-- カメラ -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- マイク -->
+    <!-- アプリ権限追加の設定ここまで -->
+    
    <application
         android:label="barcodeokapi"
         android:name="${applicationName}"
