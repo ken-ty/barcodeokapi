@@ -1,3 +1,4 @@
+import 'package:barcodeokapi/core/domain_layer/permission_request_use_case.dart';
 import 'package:barcodeokapi/core/ui_layer/app.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
@@ -26,6 +27,9 @@ void main() async {
     FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
     return true;
   };
+
+  // アプリに必要な権限の確認
+  PermissionRequestUseCase.invoke();
 
   // 指定されたウィジェットをインフレートして画面にアタッチします.
   // ルート ウィジェットの作成なども行います.
