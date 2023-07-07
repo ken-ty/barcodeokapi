@@ -45,6 +45,18 @@
 	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+    <!-- アプリ権限追加の設定ここから -->
+    <!-- 参考: https://github.com/Baseflow/flutter-permission-handler/blob/main/permission_handler_apple/example/ios/Runner/Info.plist -->
+	<key>NSCameraUsageDescription</key>
+	<string>バーコードを読み取るために許可が必要です。</string>
+	<key>NSMicrophoneUsageDescription</key>
+    <string>動画を撮影するために許可が必要です。</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>アルバムから画像・動画を使用したり保存したりするために許可が必要です。</string>
+	<!-- 使わないけど必要ぽいので入れておくが, 一旦コメントアウト https://github.com/Baseflow/flutter-permission-handler/issues/302 -->
+	<!-- <key>NSAppleMusicUsageDescription</key> -->
+	<!-- <string>アルバムアクセスの為の権限設定を追加</string> -->
+	<!-- アプリ権限追加の設定ここまで -->
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 </dict>

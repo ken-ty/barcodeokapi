@@ -37,5 +37,60 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     flutter_additional_ios_build_settings(target)
+    # アプリで使用する権限が info.plist で不足なく定義されているか確認する
+    # 参考: https://nobushiueshi.com/flutterflutter2%E7%B3%BB%E3%81%A7%E3%81%AE%E6%A8%A9%E9%99%90permission%E3%81%AE%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E6%96%B9%E6%B3%95/
+    target.build_configurations.each do |config|
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= [
+        '$(inherited)',
+
+        # 使用する権限のコメントを外してください.
+        # 参考: https://github.com/Baseflow/flutter-permission-handler/blob/main/permission_handler_apple/ios/Classes/PermissionHandlerEnums.h
+
+        ## dart: PermissionGroup.calendar
+        # 'PERMISSION_EVENTS=1',
+
+        ## dart: PermissionGroup.reminders
+        # 'PERMISSION_REMINDERS=1',
+
+        ## dart: PermissionGroup.contacts
+        # 'PERMISSION_CONTACTS=1',
+
+        # dart: PermissionGroup.camera
+        'PERMISSION_CAMERA=1',
+
+        # dart: PermissionGroup.microphone
+        'PERMISSION_MICROPHONE=1',
+
+        ## dart: PermissionGroup.speech
+        # 'PERMISSION_SPEECH_RECOGNIZER=1',
+
+        # 写真ライブラリに使用される: https://stackoverflow.com/questions/56958959/permissionsplugin-photos-vs-media-library
+        # dart: PermissionGroup.photos
+        'PERMISSION_PHOTOS=1',
+
+        ## dart: [PermissionGroup.location, PermissionGroup.locationAlways, PermissionGroup.locationWhenInUse]
+        # 'PERMISSION_LOCATION=1',
+
+        ## dart: PermissionGroup.notification
+        # 'PERMISSION_NOTIFICATIONS=1',
+
+
+        ## 音楽ライブラリに使用される: https://stackoverflow.com/questions/56958959/permissionsplugin-photos-vs-media-library
+        ## dart: PermissionGroup.mediaLibrary
+        # 'PERMISSION_MEDIA_LIBRARY=1',
+
+        ## dart: PermissionGroup.sensors
+        # 'PERMISSION_SENSORS=1',
+
+        ## dart: PermissionGroup.bluetooth
+        # 'PERMISSION_BLUETOOTH=1',
+
+        ## dart: PermissionGroup.appTrackingTransparency
+        # 'PERMISSION_APP_TRACKING_TRANSPARENCY=1',
+
+        ## dart: PermissionGroup.criticalAlerts
+        # 'PERMISSION_CRITICAL_ALERTS=1'
+      ]
+    end
   end
 end
